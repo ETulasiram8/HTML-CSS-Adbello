@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container1 {
+    background-color:rgb(106, 56, 154);
+    background-size:cover;
+    flex-wrap: wrap; 
+    text-align: center;
+    width :400px;
+    margin-bottom: 20px;
+}
+
+.logo1 {
+    height:55px;
+    width:155px; 
+    margin-top: 45px;
+    margin-bottom: 75px;
+}
+
+
+.para {
+    font-size: 15px;
+    color: white;
+    padding-left: 225px;
+    padding-top:15px;
+}
+.boxsize {
+    
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+    background-color: rgb(159, 119, 190); 
+    border-width: 0px; 
+    height:47px;
+    width:330px;
+    margin-bottom: 10px;
+    
+
+}
+input::placeholder {
+    color:white;
+    font-size:15px;
+    padding-left: 20px; 
+    
+    
+} 
+.btn {
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+    background-color:rgb(99, 226, 197);
+    color:white;
+    border-width: 0px;
+    margin-top:20px; 
+    height:47px;
+    width:330px;
+    font-size: 15px;
+}
+.para1 {
+    font-size: 15px;
+    color: white; 
+    padding-top: 45px;
+    font-size: 14px;
+}
+.btn2 {
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px ;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+    color:white;
+    border-width: 0px;
+    height:47px;
+    width:330px;
+    font-size: 15px; 
+   background-color: transparent;
+   border:2px solid white;
+   font-size: 20px;
+   margin-bottom: 35px;
+}
+select {
+   
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(159, 119, 190);
+    color: white;
+    font-size: 16px;
+    height:47px;
+    width:330px;
+  }
+  .register-btn {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #64ffda;
+  color: #004d40;
+  margin-bottom: 15px;
+  height:47px;
+  width:330px;
+  margin-top:25px;
+  margin-bottom: 30px;
+  }
+  .login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding-bottom: 45px;
+  }
+  
+  .login-container p {
+    color: white;
+    margin: 0;
+  }
+  .login-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    margin-left: 10px;
+    height:45px;
+    width:100px;
+  } 
+  a:hover{
+    text-decoration: underline;
+    color: white;
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-left: 40px;
+  }
+  
+  .checkbox-container input {
+    margin-right: 10px;
+  }
+  
+  .checkbox-container label {
+    color: white;
+    font-size: 14px; 
+
+  }
+  .checkbox-container a {
+    color: white; 
+  }
+  input[type=email]{
+    font-size: 20px; 
+    color: white;
+    
+  }
+  input[type=password]{
+    font-size: 20px; 
+    color: white;
+  }
+
+    
