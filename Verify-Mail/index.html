@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email-Varify</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function verifyMail() {
+            let mail=document.getElementById("user");
+            if(mail.trim().value=="" || !/[a-b]/.test(mail.value) || !/[@#$*]/.test(mail.value)||!/\d/.test(mail.value)){
+                alert("Invalid Mail")
+                mail.style.border="solid 2px red";
+                return false
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="verify">
+        <h1>Verify-Mail</h1>
+        <form onsubmit="return verifyMail()">
+        
+            <label for="user">Email:</label>
+            <input type="email" id="user" placeholder="verify Mail" required autofocus><br/><br/>
+            <button type="submit" class="btn1"onclick="window.location.href='/SignIn/index.html'">Back</button><button type="submit" class="btn2">Verify</button>
+        </form>  
+        
+    </div>
+    
+</body>
+</html>

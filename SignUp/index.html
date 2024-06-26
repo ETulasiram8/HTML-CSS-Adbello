@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <html lang="en">
 
 <head>
@@ -18,9 +18,10 @@
             let pass=document.getElementById("custom3")
             let checkbox=document.getElementById("terms")
             let valid = true;
+            
             //Email validation
             if (user1.trim().value==""||!/[a-z]/.test(user1.value) || !/\d/.test(user1.value) ||!/[@#$*]/.test(user.value)){
-                alert("invalid Email")
+                alert("invalid Email");
                 user1.style.border="solid lpx red";
                 valid = false;
             }
@@ -28,7 +29,7 @@
                 user1.style.border="";
             }
             // Name validation
-            if (text.trim().value==""||!/[a-z]/.test(text.value) || !/[A-Z]/.test(text.value) || text.value.trim().length>5){
+            if (text.trim().value==""||!/[a-z]/.test(text.value) || !/[A-Z]{1}/.test(text.value) || text.value.trim().length>5){
                 alert("invalid Name")
                 text.style.border="solid lpx red";
                 valid= false;
@@ -39,12 +40,12 @@
             }
             // Number validation
             if (tele.value.trim()==""|| !/^\d{10}$/.test(tele.value)){
-                lert("invalid Number")
-                text.style.border="solid lpx red";
+                alert("invalid Number")
+                tele.style.border="solid lpx red";
                 valid= false;
             }
             else {
-                text.style.border="";
+                tele.style.border="";
             }
 
             
@@ -62,6 +63,7 @@
                 alert("You must agree to the terms and conditions");
                 valid = false;
             }
+            
 
             if (!valid) {
                 alert("Please correct the highlighted fields.");
@@ -79,7 +81,7 @@
                     <img src="https://res.cloudinary.com/difbsbubr/image/upload/v1718938856/logo_qzrp2n.png "
                         alt="adbello" class="logo1">
 
-                    <form onsubmit="return validateSignUpPage()" action="/SignIn/index.html" >
+                    <form id ="box" onsubmit="return validateSignUpPage()" action="/SignIn/index.html" >
                         <input id="custom " type="email" placeholder="Email"  autofocus="required"
                             class="boxsize"><br /><br />
                         <input  id ="custom1"type="text" placeholder="Full Name" autofocus="required"
@@ -108,6 +110,103 @@
 
 
 
+</body>
+
+</html> -->
+<html lang="en">
+
+<head>
+    <title>AdBello</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <script>
+        function validateSignUpPage() {
+            let user1 = document.getElementById("custom");
+            let text = document.getElementById("custom1");
+            let tele = document.getElementById("custom2");
+            let pass = document.getElementById("custom3");
+            let checkbox = document.getElementById("terms");
+            
+            let valid = true;
+
+            // Email validation
+            if (user1.value.trim() == "" || !/[a-z]/.test(user1.value) || !/\d/.test(user1.value) || !/[@#$*]/.test(user1.value)) {
+                alert("Invalid Email");
+                user1.style.border = "solid 1px red";
+                valid = false;
+            } else {
+                user1.style.border = "";
+            }
+
+            // Name validation
+            if (text.value.trim() == "" || !/[a-z]/.test(text.value) || !/[A-Z]{1}/.test(text.value) || text.value.trim().length > 50) {
+                alert("Invalid Name");
+                text.style.border = "solid 1px red";
+                valid = false;
+            } else {
+                text.style.border = "";
+            }
+
+            // Number validation
+            if (tele.value.trim() == "" || !/^\d{10}$/.test(tele.value)) {
+                alert("Invalid Number");
+                tele.style.border = "solid 2px red";
+                valid = false;
+            } else {
+                tele.style.border = "";
+            }
+
+            // Password validation
+            if (!/[A-Z]/.test(pass.value) || !/[a-z]/.test(pass.value) || !/\d/.test(pass.value) || !/[#@$%^&*]/.test(pass.value) || pass.value.trim() == "" || pass.value.trim().length < 8) {
+                alert("Invalid Password");
+                pass.style.border = "solid 2px red";
+                valid = false;
+            } else {
+                pass.style.border = "";
+            }
+
+            // Checkbox validation
+            if (!checkbox.checked) {
+                alert("You must agree to the terms and conditions");
+                valid = false;
+            }
+
+            if (!valid) {
+                alert("Please correct the highlighted fields.");
+            }
+
+            return valid;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container1">
+        <img src="https://res.cloudinary.com/difbsbubr/image/upload/v1718938856/logo_qzrp2n.png" alt="adbello" class="logo1">
+
+        <form  onsubmit="return validateSignUpPage()" action="/SignIn/index.html">
+            <input id="custom" type="email" placeholder="Email" required class="boxsize"><br /><br />
+            <input id="custom1" type="text" placeholder="Full Name" required class="boxsize"><br /><br />
+            <select required>
+                <option value="I'm here to">I'm here to</option>
+            </select><br /><br />
+            <input id="custom2" type="tel" placeholder="Phone number" required class="boxsize"><br /><br />
+            <input id="custom3" type="password" placeholder="Password" required class="boxsize"><br /><br />
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms">
+                <label for="terms">I Accept <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <div class="login-container">
+            <p>Already a member?</p>
+            <button class="login-btn" onclick="window.location.href='/SignIn/index.html'">Login</button>
+        </div>
+    </div>
 </body>
 
 </html>
