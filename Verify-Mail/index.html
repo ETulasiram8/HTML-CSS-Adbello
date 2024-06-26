@@ -19,13 +19,17 @@
 </head>
 <body>
     <div class="verify">
-        <h1>Verify-Mail</h1>
+        <h3>Forgot Password?</h3>
         <form onsubmit="return verifyMail()">
         
-            <label for="user">Email:</label>
-            <input type="email" id="user" placeholder="verify Mail" required autofocus><br/><br/>
-            <button type="submit" class="btn1"onclick="window.location.href='/SignIn/index.html'">Back</button><button type="submit" class="btn2">Verify</button>
+            <label for="user">Email address:</label><br/>
+            <input type="email" id="user" required autofocus><br/><br/>
+            <div class="form-box">
+            <button type="submit" class="btn1">Reset password</button>
+            <a href='/SignIn/index.html'>Login</a>
+            </div>
         </form>  
+       
         
     </div>
     
