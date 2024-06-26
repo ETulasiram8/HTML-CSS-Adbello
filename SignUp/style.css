@@ -7,12 +7,13 @@ body {
     align-items: center;
 }
 .container1 {
-    background-color:rgb(106, 56, 154);
+    background-color:rgb(130, 71, 186);
     background-size:cover;
+    background-attachment: fixed;
     flex-wrap: wrap; 
     text-align: center;
     width :400px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .logo1 {
@@ -35,18 +36,21 @@ body {
     border-top-right-radius:5px ;
     border-bottom-left-radius:5px ;
     border-bottom-right-radius:5px ;
-    background-color: rgb(159, 119, 190); 
+    background-color: rgb(182, 141, 212); 
     border-width: 0px; 
     height:47px;
     width:330px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
+    
+    
     
 
 }
 input::placeholder {
     color:white;
-    font-size:15px;
+    font-size:14px;
     padding-left: 20px; 
+    font-family: Mulish; 
     
     
 } 
@@ -88,14 +92,15 @@ input::placeholder {
 }
 select {
    
-    padding: 10px;
+    padding: 11px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(159, 119, 190);
+    background-color:rgb(182, 141, 212);
     color: white;
-    font-size: 16px;
+    font-size: 14px;
     height:47px;
     width:330px;
+    font-family: Mulish; 
   }
   .register-btn {
     padding: 10px;
@@ -104,12 +109,13 @@ select {
     cursor: pointer;
     font-size: 16px;
     background-color: #64ffda;
-  color: #004d40;
+  color: white;
   margin-bottom: 15px;
   height:47px;
   width:330px;
   margin-top:25px;
   margin-bottom: 30px;
+  font-family: Mulish;
   }
   .login-container {
     display: flex;
@@ -139,6 +145,7 @@ select {
     align-items: center;
     margin-bottom: 15px;
     margin-left: 40px;
+
   }
   
   .checkbox-container input {
@@ -170,5 +177,9 @@ select {
   input[type=text]{
     font-size: 20px; 
     color: white;
+  }
+  input[type=checkbox]{
+    accent-color: rgb(159, 119, 190); 
+    width: auto;
   }
     
